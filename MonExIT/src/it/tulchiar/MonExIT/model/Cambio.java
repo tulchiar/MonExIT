@@ -34,7 +34,14 @@ public class Cambio {
 		this.valutaA = valutaA;
 	}
 	public Double getTassoDicambio() {
-		return tassoDicambio;
+		
+		if(this.valutaA != null & this.valutaB != null & this.data != null) {
+			tassoDicambio = getTassoDiCambio(this.valutaA, this.valutaB, this.data);
+			return tassoDicambio;
+		} else {
+			return null;
+		}
+	
 	}
 	public void setTassoDicambio(Double tassoDicambio) {
 		this.tassoDicambio = tassoDicambio;

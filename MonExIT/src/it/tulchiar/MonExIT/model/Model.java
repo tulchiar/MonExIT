@@ -12,7 +12,18 @@ public class Model {
 		cambio.setData(data);
 		
 		return cambio.getTassoDicambio();
-		
+	
 	}
+	
+	@Override	
+	public String toString() {
+		return cambio.getTassoDicambio().toString();
+	}
+
+	public Model() {
+		super();
+	}
+		
+	
 	
 }
