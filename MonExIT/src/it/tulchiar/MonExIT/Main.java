@@ -1,4 +1,4 @@
-package MonExIT;
+package it.tulchiar.MonExIT;
 	
 import javafx.application.Application;
 import javafx.stage.Stage;
