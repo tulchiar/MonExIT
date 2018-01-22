@@ -12,7 +12,6 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-//			BorderPane root = (BorderPane)FXMLLoader.load(getClass().getResource("MonExIT.fxml"));
 			
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("MonExIT.fxml"));
 			

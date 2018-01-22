@@ -56,6 +56,9 @@ public class MonExITController {
 
     @FXML // This method is called by the FXMLLoader when initialization is complete
     void initialize() {
+    	
+    	btnCalcola.setDefaultButton(true);
+    	
         assert txtImporto != null : "fx:id=\"txtImporto\" was not injected: check your FXML file 'MonExIT.fxml'.";
         assert txtData != null : "fx:id=\"txtData\" was not injected: check your FXML file 'MonExIT.fxml'.";
         assert txtControvalore != null : "fx:id=\"txtControvalore\" was not injected: check your FXML file 'MonExIT.fxml'.";
