@@ -7,8 +7,10 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <BorderPane xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.tulchiar.MonExIT.MonExITController">
    <center>
@@ -16,26 +18,50 @@
          <children>
             <GridPane hgap="5.0" vgap="5.0">
               <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
               </columnConstraints>
               <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <TextField fx:id="txtImporto" GridPane.rowIndex="1" />
-                  <TextField fx:id="txtData" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Label text="Importo" />
-                  <Label text="Data" GridPane.columnIndex="1" />
-                  <Label text="Controvalore" GridPane.columnIndex="2" />
-                  <TextField fx:id="txtControvalore" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <Button fx:id="btnCalcola" mnemonicParsing="false" onAction="#doCalcola" prefHeight="32.0" prefWidth="100.0" text="Calcola" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                  <TextField fx:id="txtImporto" prefHeight="35.0" prefWidth="130.0" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="18.0" />
+                     </font></TextField>
+                  <Label text="Importo">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></Label>
+                  <Label text="Data" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></Label>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="4.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <TextField fx:id="txtGiorno">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtMese">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtAnno" minWidth="100.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                     </children>
                      <GridPane.margin>
                         <Insets />
-                     </GridPane.margin></Button>
+                     </GridPane.margin>
+                  </HBox>
                </children>
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -44,7 +70,36 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </VBox.margin>
             </GridPane>
+            <Label text="Controvalore">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <HBox spacing="5.0">
+               <children>
+                  <TextField fx:id="txtControvalore" disable="true" editable="false" prefHeight="35.0" prefWidth="237.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font></TextField>
+                  <Button fx:id="btnCalcola" defaultButton="true" mnemonicParsing="false" onAction="#doCalcola" prefHeight="32.0" prefWidth="100.0" text="Calcola">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
          </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
       </VBox>
    </center>
 </BorderPane>
