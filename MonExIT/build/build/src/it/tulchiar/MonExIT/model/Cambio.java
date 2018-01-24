@@ -13,6 +13,10 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.ButtonType;
+
 public class Cambio {
 	private Double importoValutaA;
 	private Valuta valutaA;
@@ -132,15 +136,18 @@ public class Cambio {
 				conn.disconnect();
 
 			  } catch (MalformedURLException e) {
-
+				Alert alert = new Alert(AlertType.ERROR, e.getMessage(), ButtonType.OK);  
+				alert.show();
 				e.printStackTrace();
 
 			  } catch (IOException e) {
-
+				Alert alert = new Alert(AlertType.ERROR, e.getMessage(), ButtonType.OK);  
+				alert.show();
 				e.printStackTrace();
 
 			  } catch (org.json.simple.parser.ParseException e) {
-				// TODO Auto-generated catch block
+				Alert alert = new Alert(AlertType.ERROR, e.getMessage(), ButtonType.OK);  
+				alert.show();
 				e.printStackTrace();
 			}
 		
@@ -212,11 +219,16 @@ public class Cambio {
 				conn.disconnect();
 
 			  } catch (MalformedURLException e) {
+				  Alert alert = new Alert(AlertType.ERROR, e.getMessage(), ButtonType.OK);  
+				  alert.show();
 				  e.printStackTrace();
 			  } catch (IOException e) {
+				  Alert alert = new Alert(AlertType.ERROR, e.getMessage(), ButtonType.OK);  
+				  alert.show();
 				  e.printStackTrace();
 			  } catch (org.json.simple.parser.ParseException e) {
-				// TODO Auto-generated catch block
+				Alert alert = new Alert(AlertType.ERROR, e.getMessage(), ButtonType.OK);  
+				alert.show();
 				e.printStackTrace();
 			}
 		
